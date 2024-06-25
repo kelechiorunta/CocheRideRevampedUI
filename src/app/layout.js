@@ -1,7 +1,14 @@
 import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { Nunito } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+// import MainHeader from "./components/MainHeader";
 
 const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight:"400"})
+const nunito = Nunito({subsets: ['latin-ext'], weight:'400'})
+const monteserrat = Montserrat({subsets: ["latin-ext"], weight:'400'})
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${monteserrat.className} w-screen`}>
+        {children}
+      </body>
     </html>
   );
 }

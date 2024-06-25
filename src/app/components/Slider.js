@@ -1,0 +1,71 @@
+'use client'
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaArrowLeft, FaArrowRight, FaArrowCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+import Image from 'next/image';
+
+export default function Slider({slides}) {
+
+  const [slide, setSlide] = useState(0);
+  const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
+  const [prevSlide, setPrevSlide] = useState(0); // Track the previous slide index
+
+  const moveSlideForward = () => {
+    setDirection(1);
+    setPrevSlide(slide);
+    setSlide((n) => (n + 1) % slides.length);
+  };
+
+  const moveSlideBackward = () => {
+    setDirection(-1);
+    setPrevSlide(slide);
+    setSlide((n) => (n - 1 + slides.length) % slides.length);
+  };
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      direction === 1 ? moveSlideForward() : moveSlideBackward();
+    }, 7000); // Slide changes every 3 seconds
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [slide, direction]);
+
+//   const staggerVariant = {
+//     hidden:{x: '100%', opacity: 0}, 
+//     visible:{x: '0',  opacity:1, transition: {duration: 0.8}},
+// }
+
+  return (
+    <div className='slideContainer px-4 pb-4 flex flex-col items-center w-[538px] h-[538px] justify-start gap-x-2 bg-black text-white
+            border border-b-amber-900 rounded-xl text-2xl'>
+      <div className=' border-white flex relative'>
+        <nav className=' text-white flex justify-between absolute z-0'>
+            <button className='rounded p-4 bg-gray-600'  onClick={moveSlideBackward}><FaArrowLeft size={30} fill='white'/></button>
+            <button className='rounded p-4 bg-gray-600' onClick={moveSlideForward}><FaArrowRight size={30} fill='white'/></button>
+        </nav>
+        
+        <div className="w-[538px] h-[538px] rounded-xl" style={{ overflow: 'hidden', position: 'relative'}}>
+            <AnimatePresence initial={false} custom={direction}>
+            {slides.length>0 && slides.map((slidepic, index) => (
+                (index === slide || index === prevSlide) && (
+                <motion.div
+                className='rounded-xl'
+                    key={index}
+                    initial={{ x: index === slide ? (direction === 1 ? '100%' : '-100%') : (direction === 1 ? '-100%' : '100%')}}
+                    animate={{ x: index === slide ? 0 : (direction === 1 ? '-100%' : '100%') }}
+                    exit={{ x: index === slide ? (direction === 1 ? '-100%' : '100%') : (direction === 1 ? '-100%' : '100%')}}
+                    transition={{ duration: 0.5 }}
+                    style={{ position: 'absolute', width: '100%' }}
+                >
+                    <Image className='w-[538px] h-[538px] rounded-xl'src={slides[index].heroPic} alt={`slide${index}`} />
+                </motion.div>
+                )
+            ))}
+           </AnimatePresence> 
+      </div>
+    </div>
+</div> 
+  );
+}
