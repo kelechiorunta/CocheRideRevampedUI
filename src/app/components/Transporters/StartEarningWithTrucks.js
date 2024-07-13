@@ -1,6 +1,6 @@
 import React from 'react'
 import TransporterPic from '../../../../public/assets/img/about4@2x.jpg'
-import MoveGoodsOverlay from '../../../../public/assets/img/move-goods-overlay.png'
+import MoveGoodsOverlay from '../../../../public/assets/img/MoveGoods/move-goods-overlay.png'
 import Image from 'next/image'
 
 export default function StartEarningWithTrucks() {

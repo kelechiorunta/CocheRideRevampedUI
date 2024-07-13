@@ -185,12 +185,30 @@ body {
 
   }
 
+  
+  .slidemenu {
+    color: black;
+    top:-10%;
+    left:-100%;
+    overflow: hidden;
+    transition: left 1s ease;
+  }
+
+  .close{
+    color: black;
+    top: -10%;
+    left: -1%;
+    overflow: hidden;
+    transition: left 1s ease;
+  }
+
   .header_container{
     position: sticky;
     top:0;
     z-index: 50;
     opacity: 1;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    
     /* transition: top 3s ease, opacity 0.3 ease; */
   }
 

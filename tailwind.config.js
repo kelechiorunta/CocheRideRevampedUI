@@ -7,6 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        "mainheader_breakpoint_one" : "1190px",
+        "mainheader_breakpoint_two" : "1189px",
+        "mainheader_breakpoint_three" : "1167px",
+        "mainheader_breakpoint_four" : "1086px",
+        "mainheader_breakpoint_five" : "812px",
+        "xsm": "330px"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -55,13 +55,13 @@ export default function Home() {
   }, {scope: scopeContainer.current});
 
   return (
-    <main className="mainContainer relative flex h-full w-full flex-col items-center  px-[75px] bg-black z-20">
+    <main className="mainContainer relative flex h-full w-full flex-col items-center  bg-black z-20">
       
-      <div className="w-screen h-full fixed top-0 z-50 ">
+      <div className="w-full h-full fixed top-0 z-50 ">
         <MainHeader/>
       </div>
 
-      <div className="bg-black w-screen px-[75px] z-20 py-8">
+      <div className="bg-black w-screen z-20 py-16">
         <HeroMainPage/>
       </div>
 
