@@ -3,13 +3,19 @@ import Image from "next/image";
 import MainHeader from "./components/MainHeader";
 import HeroMainPage from "./components/HeroMainPage";
 import WhoAreWe from './components/WhoAreWe'
-import WhyChooseUs from './components/WhyChooseUs'
+// import WhyChooseUs from './components/WhyChooseUs'
 import FeaturedService from './components/FeaturedService'
 import Vision from './components/Vision'
 import Advantages from './components/Advantages'
 import Testimonials from './components/Testimonials'
 import Partners from './components/Partners'
 import Footer from './components/Footer'
+
+import LandingSection from "./builder_components/LandingSection/LandingSection";
+import WhoWeAre from "./builder_components/WhoWeAre/WhoWeAre";
+import WhyChooseUs from "./builder_components/WhyChooseUs/WhyChooseUs"
+
+
 import { gsap, ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useRef, useEffect } from "react";
@@ -55,23 +61,34 @@ export default function Home() {
   }, {scope: scopeContainer.current});
 
   return (
-    <main className="mainContainer relative flex h-full w-full flex-col items-center  bg-black z-20">
+    <main className="mainContainer relative flex h-full flex-col items-center  bg-black z-20">
       
-      <div className="w-full h-full fixed top-0 z-50 ">
+      <div className="w-full fixed top-0 z-50 ">
         <MainHeader/>
       </div>
 
-      <div className="bg-black w-screen z-20 py-16">
-        <HeroMainPage/>
+      <div className=" w-screen pt-16">
+        <LandingSection/>
       </div>
-
-      <div className="px-[75px] py-[88px] bg-white w-screen z-20">
-        <WhoAreWe/>
+      <div className=" w-screen -mt-28 ">
+        <WhoWeAre/>
       </div>
-
-      <div className="whychooseus px-[75px] py-[88px] w-screen -mt-[50px] z-20">
+      <div className="whychooseus w-screen -mt-6">
         <WhyChooseUs/>
       </div>
+
+
+      {/* <div className="bg-black w-screen z-20 py-16">
+        <HeroMainPage/>
+      </div> */}
+
+      {/* <div className="px-[75px] py-[88px] bg-white w-screen z-20">
+        <WhoAreWe/>
+      </div> */}
+
+      {/* <div className="whychooseus px-[75px] py-[88px] w-screen -mt-[50px] z-20">
+        <WhyChooseUs/>
+      </div> */}
 
       <div className="featuredservice px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20">
         <FeaturedService/>

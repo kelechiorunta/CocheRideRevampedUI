@@ -58,6 +58,26 @@ body {
     background: rgba(245, 245, 248, 5);
   }
 
+  .whowearebuilder{
+    /* position: relative; */
+    z-index: 1;
+    /* display: inline-block; */
+
+    &::before{
+      /* display: inline-block; */
+      position: absolute;
+      content: '';
+      /* background-color: black; */
+      background-color:#fffbf4;
+      border-radius: 10px;
+      top: 100px;
+      right:75px;
+      width:80%;
+      height:480px;
+      z-index: -1;
+    }
+  }
+
   .whoweareImage{
     position: relative;
     z-index: 1;

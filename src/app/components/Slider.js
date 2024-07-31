@@ -39,19 +39,19 @@ export default function Slider({slides}) {
 
   return (
     <div className='slideContainer px-4 pb-4 flex flex-col items-center justify-start gap-x-2 bg-black text-white
-            border border-b-amber-900 rounded-xl text-2xl sm:max-mainheader_breakpoint_four:w-[600px] mainheader_breakpoint_four:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[538px] h-[538px]'>
+            border border-b-amber-900 rounded-xl text-2xl w-[400px] h-[400px]'>
       <div className=' border-white flex relative'>
         <nav className=' text-white flex justify-between absolute z-0'>
             <button className='rounded p-4 bg-gray-600'  onClick={moveSlideBackward}><FaArrowLeft size={30} fill='white'/></button>
             <button className='rounded p-4 bg-gray-600' onClick={moveSlideForward}><FaArrowRight size={30} fill='white'/></button>
         </nav>
         
-        <div className="rounded-xl sm:max-mainheader_breakpoint_four:w-[600px] mainheader_breakpoint_four:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[538px] h-[538px]" style={{ overflow: 'hidden', position: 'relative'}}>
+        <div className="rounded-xl w-[400px] h-[400px]" style={{ overflow: 'hidden', position: 'relative'}}>
             <AnimatePresence initial={false} custom={direction}>
             {slides.length>0 && slides.map((slidepic, index) => (
                 (index === slide || index === prevSlide) && (
                 <motion.div
-                className='rounded-xl md:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[538px] h-[538px]'
+                className='rounded-xl md:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[400px] h-[400px]'
                     key={index}
                     initial={{ x: index === slide ? (direction === 1 ? '100%' : '-100%') : (direction === 1 ? '-100%' : '100%')}}
                     animate={{ x: index === slide ? 0 : (direction === 1 ? '-100%' : '100%') }}
@@ -59,7 +59,7 @@ export default function Slider({slides}) {
                     transition={{ duration: 0.5 }}
                     style={{ position: 'absolute', width:'100%' }}
                 >
-                    <Image className=' rounded-xl sm:max-mainheader_breakpoint_four:w-[600px] mainheader_breakpoint_four:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[538px] h-[538px]'src={slides[index].heroPic} alt={`slide${index}`} />
+                    <Image className=' rounded-xl sm:max-mainheader_breakpoint_four:w-[400px] mainheader_breakpoint_four:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[400px] h-[400px]'src={slides[index].heroPic} alt={`slide${index}`} />
                 </motion.div>
                 )
             ))}

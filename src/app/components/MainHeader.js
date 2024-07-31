@@ -56,7 +56,7 @@ export default function MainHeader() {
     className='header_container bg-black fixed top-0 z-50 text-white border-white flex items-center justify-between 
      shadow-md w-full px-[75px] pt-6 pb-6 sm:max-mainheader_breakpoint_four:gap-x-[50px] md:max-xl:gap-x-[150px] xl:max-2xl:gap-x-[70px] xsm:max-sm:px-[50px] '>
         <Link href='/'>
-            <Image className='w-[100px] h-10 min-w-[70px] xsm:max-sm:min-w-[00px] w-[100px]' src={logo} alt='logo'/>
+            <Image className='w-[100px] h-10 min-w-[70px] xsm:max-sm:min-w-[00px]' src={logo} alt='logo'/>
         </Link>
         <div className='flex items-center space-x-8 w-full justify-between xsm:max-lg:hidden'>
             <nav className='relative flex items-center justify-between md:max-xl:mr-[0] space-x-10 xl:max-2xl:space-x-4 mr-[253px]'>
