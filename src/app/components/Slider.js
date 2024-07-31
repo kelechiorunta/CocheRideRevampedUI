@@ -40,7 +40,7 @@ export default function Slider({slides}) {
   return (
     <div className='slideContainer px-4 pb-4 flex flex-col items-center justify-start gap-x-2 bg-black text-white
             border border-b-amber-900 rounded-xl text-2xl w-[400px] h-[400px]'>
-      <div className=' border-white flex relative'>
+      <div className='flex relative'>
         <nav className=' text-white flex justify-between absolute z-0'>
             <button className='rounded p-4 bg-gray-600'  onClick={moveSlideBackward}><FaArrowLeft size={30} fill='white'/></button>
             <button className='rounded p-4 bg-gray-600' onClick={moveSlideForward}><FaArrowRight size={30} fill='white'/></button>

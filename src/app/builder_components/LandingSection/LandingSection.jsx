@@ -22,7 +22,7 @@ const slides = [
 
 export default function LandingSection() {
   return (
-    <div className="box-border flex relative flex-col shrink-0 pb-16 my-5 h-auto bg-black">
+    <div className="box-border flex relative flex-col shrink-0 pb-8 my-5 h-auto bg-black">
       <div className="box-border flex relative flex-col shrink-0 px-8 pt-5 pb-8 mt-5 max-w-none bg-black max-[1040px]:px-16 max-[1040px]:max-w-[1418px] max-sm:px-5">
         <div className="flex gap-x-30 justify-end pl-8 max-[1040px]:flex-col max-[1040px]:pl-0">
           <div className="flex flex-col w-full max-[1040px]:ml-0 max-[1040px]:w-full">
@@ -94,7 +94,7 @@ export default function LandingSection() {
                         <div className="box-border flex relative flex-col shrink-0 mt-0">
                           <div className="flex gap-5 max-[1040px]:flex-col">
                             <div className="flex flex-col w-full max-[1040px]:ml-0 max-[1040px]:w-full">
-                              <div className="box-border flex flex-col shrink-0 items-center px-5 pt-5 mt-5 rounded-2xl border border-white border-solid max-w-[449px] min-h-[338px] size-full max-[1040px]:max-w-[516px]">
+                              <div className="box-border flex flex-col shrink-0 items-center px-5 pt-5 mt-5 rounded-2xl border bg-white border-white border-solid max-w-[449px] min-h-[338px] size-full max-[1040px]:max-w-[516px]">
                                 <div className="flex gap-5 max-[1040px]:flex-col">
                                   {/* <div className="flex flex-col w-[33%] max-[1040px]:ml-0 max-[1040px]:w-full">
                                     <img
