@@ -29,7 +29,7 @@ export default function LandingSection() {
             <div className="box-border flex relative flex-col shrink-0 py-5 pl-5 mt-5">
               <div className="flex gap-x-30 max-[1040px]:flex-col">
                 <div className="flex flex-col w-6/12 max-[1040px]:ml-0 max-[1040px]:w-full">
-                  <div className="box-border relative shrink-0 mt-5 h-auto text-5xl font-bold text-white leading-[55.2px] max-[1040px]:mx-auto max-[850px]:text-4xl max-[1040px]:leading-14 max-sm:text-3xl max-sm:leading-10">
+                  <div className="box-border relative shrink-0 mt-5 h-auto text-5xl font-bold text-white leading-[55.2px] max-[1040px]:mx-auto xsm:max-sm:text-4xl max-[1040px]:leading-14 max-sm:text-3xl max-sm:leading-10">
                     {/* <font face="Poppins, sans-serif"> */}
                       Coche Ride: Easy Transport With Our <span className="inline-block"><Typer texts={options} time={700} speed={150}/></span>
                       {/* Other Vehicles */}
@@ -94,7 +94,7 @@ export default function LandingSection() {
                         <div className="box-border flex relative flex-col shrink-0 mt-0">
                           <div className="flex gap-5 max-[1040px]:flex-col">
                             <div className="flex flex-col w-full max-[1040px]:ml-0 max-[1040px]:w-full">
-                              <div className="box-border flex flex-col shrink-0 items-center px-5 pt-5 mt-5 rounded-2xl border bg-white border-white border-solid max-w-[449px] min-h-[338px] size-full max-[1040px]:max-w-[516px]">
+                              <div className="box-border flex flex-col shrink-0 items-center px-5 pt-5 mt-5 rounded-2xl border bg-white border-white border-solid xsm:max-sm:min-w-[300px] sm:max-sm:min-h-[300px] max-w-[449px] min-h-[338px] size-full max-[1040px]:max-w-auto">
                                 <div className="flex gap-5 max-[1040px]:flex-col">
                                   {/* <div className="flex flex-col w-[33%] max-[1040px]:ml-0 max-[1040px]:w-full">
                                     <img

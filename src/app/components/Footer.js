@@ -5,8 +5,8 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-    <div className='flex items-end justify-evenly'>
-        <div className='about_coche flex flex-col justify-start gap-4 items-start w-1/3'>
+    <div className='flex items-end justify-evenly gap-8 xsm:max-[400px]:max-w-[300px] xsm:max-lg:flex-col'>
+        <div className='about_coche flex flex-col justify-start gap-4 items-start'>
             <div className='w-20 h-20'>
                 <Image className='w-20' src={cochefooterlogo} alt={"coche_logo"}/>
             </div>
@@ -19,8 +19,8 @@ export default function Footer() {
 
         </div>
 
-        <div className='about_coche flex flex-col gap-16 justify-start items-start'>
-            <p className='text-xl'>Learn More</p>
+        <div className='about_coche flex flex-col gap-16 justify-start items-start w-full'>
+            <p className='text-xl w-full'>Learn More</p>
             <ul className='flex flex-col items-start gap-2'>
                 <li>About Us</li>
                 <li>Our Resources</li>
@@ -29,7 +29,7 @@ export default function Footer() {
             </ul>
         </div>
 
-        <div className='about_coche flex flex-col justify-start gap-8 items-start'>
+        <div className='about_coche flex flex-col justify-start gap-8 items-start w-full'>
             <p className='text-xl'>Get in Touch</p>
             <ul className='flex flex-col items-start gap-2.5'>
                 <li>contact@cocheride.org</li>

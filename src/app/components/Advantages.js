@@ -5,8 +5,8 @@ export default function Advantages() {
   return (
     <div className='flex flex-col items-center justify-center gap-8'>
         <small className='advantages_title'>ADVANTAGES OF COCHE RIDE</small>
-        <h1 className='advantages_heading text-4xl mb-4'>Benefits for our Customers, Brokers & Transporters</h1>
-        <div className='flex gap-8 items-start py-8 justify-evenly w-full'>
+        <h1 className='advantages_heading text-4xl mb-4 xsm:max-sm:text-3xl'>Benefits for our Customers, Brokers & Transporters</h1>
+        <div className='grid grid-cols-3 gap-8 py-8 w-full xsm:max-xmd:grid-cols-1 xmd:max-xl:grid-cols-2'>
             <div className='customers flex flex-col justify-start items-start border p-8 shadow-xl rounded-xl'>
                 <div className='p-5 '><FaUser size={50}/></div>
                 <p className='p-5 text-xl font-extrabold'>Customers</p>

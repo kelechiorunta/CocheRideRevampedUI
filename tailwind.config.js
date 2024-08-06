@@ -13,6 +13,8 @@ module.exports = {
         "mainheader_breakpoint_three" : "1167px",
         "mainheader_breakpoint_four" : "1086px",
         "mainheader_breakpoint_five" : "812px",
+        "xmd" : "830px",
+        
         "xsm": "330px"
       },
       backgroundImage: {

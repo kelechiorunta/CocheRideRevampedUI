@@ -21,23 +21,23 @@ import Image from 'next/image'
 
 export default function Partners() {
   return (
-    <div className='flex items-start gap-8 w-full'>
-        <div className='flex flex-col items-start justify-end gap-8 w-[548px]'>
-            <small className='partners_title px-4'>PARTNERS & CLIENTS</small>
-            <h1 className='partners_heading text-4xl leading-snug'>Trusted by over 20+ Partners & Clients</h1>
-            <p className='leading-snug text-xl w-3/4'>
+    <div className='grid items-start gap-8 justify-evenly pr-8 grid-cols-2 w-full xsm:max-[1189px]:grid-cols-1'>
+        <div className='flex flex-col items-start justify-start gap-8 w-[548px] xsm:max-sm:pr-20'>
+            <small className='partners_title px-4 '>PARTNERS & CLIENTS</small>
+            <h1 className='partners_heading text-4xl leading-snug xsm:max-[400px]:max-w-[300px]'>Trusted by over 20+ Partners & Clients</h1>
+            <p className='leading-snug text-xl w-4/5 xsm:max-[400px]:max-w-[300px]'>
                 Our partners and clients form the backbone of our success. 
                 With a proven track record of excellence, we collaborate 
                 seamlessly to deliver efficient and reliable logistics solutions.
             </p>
-            <p className='leading-snug text-xl w-3/4'>
+            <p className='leading-snug text-xl w-4/5 xsm:max-[400px]:max-w-[300px]'>
                 From multinational corporations to local enterprises, our dedication 
                 to personalized service, cutting-edge technology, and unwavering commitment
                  to meeting unique logistical needs sets us apart.
             </p>
 
         </div>
-        <div className='flex flex-row flex-wrap items-start justify-center gap-14 w-[868px]'>
+        <div className='flex flex-row flex-wrap items-start justify-start gap-14 xsm:max-[400px]:max-w-[300px] xsm:max-[500px]:justify-center'>
                 <Image className='w-[150px] h-{150px]' src={partner1} alt='pic'/>
                 <Image className='w-[150px] h-{150px]' src={partner2} alt='pic'/>
                 <Image className='w-[150px] h-{150px]' src={partner3} alt='pic'/>

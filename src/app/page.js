@@ -4,7 +4,7 @@ import MainHeader from "./components/MainHeader";
 import HeroMainPage from "./components/HeroMainPage";
 import WhoAreWe from './components/WhoAreWe'
 // import WhyChooseUs from './components/WhyChooseUs'
-import FeaturedService from './components/FeaturedService'
+// import FeaturedService from './components/FeaturedService'
 import Vision from './components/Vision'
 import Advantages from './components/Advantages'
 import Testimonials from './components/Testimonials'
@@ -14,6 +14,11 @@ import Footer from './components/Footer'
 import LandingSection from "./builder_components/LandingSection/LandingSection";
 import WhoWeAre from "./builder_components/WhoWeAre/WhoWeAre";
 import WhyChooseUs from "./builder_components/WhyChooseUs/WhyChooseUs"
+import FeaturedService from "./builder_components/featuredservice/FeaturedService"
+import FeaturedServiceII from "./builder_components/featuredserviceII/FeaturedServiceII";
+// import Testimonials from "./builder_components/Testimonials/Testimonials";
+// import Advantages from "./builder_components/Advantages/Advantages";
+// import AdvantagesII from "./builder_components/AdvantagesII/AdvantagesII";
 
 
 import { gsap, ScrollTrigger } from "gsap/all";
@@ -61,7 +66,7 @@ export default function Home() {
   }, {scope: scopeContainer.current});
 
   return (
-    <main className="mainContainer relative flex h-full flex-col items-center  bg-black z-20">
+    <main className="mainContainer relative overflow-hidden flex h-full flex-col items-center  bg-black z-20">
       
       <div className="w-full fixed top-0 z-50 ">
         <MainHeader/>
@@ -76,7 +81,22 @@ export default function Home() {
       <div className="whychooseus w-screen -mt-6">
         <WhyChooseUs/>
       </div>
-
+      <div className="featuredservice mb-20 py-[88px] bg-white w-screen -mt-[50px] z-20">
+        <FeaturedService/>
+      </div>
+      <div className="featuredservice pb-20 bg-white w-screen -mt-[200px] z-20 ">
+        <FeaturedServiceII/>
+      </div>
+      <div ref={scopeContainer}
+      className="clipVision  px-[75px] py-[88px] overflow-hidden bg-white w-screen h-[600px] z-10 ">
+        <div 
+        className='backgroundOverlaypic absolute -top-0 left-0 w-full h-full -z-10 '></div>
+        <Vision className='vision_mover'/>
+      </div>
+      {/* <div className="advantages_container px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20">
+        {/* <Advantages/> */}
+        {/* <AdvantagesII/> */}
+      {/* </div>  */}
 
       {/* <div className="bg-black w-screen z-20 py-16">
         <HeroMainPage/>
@@ -90,30 +110,33 @@ export default function Home() {
         <WhyChooseUs/>
       </div> */}
 
-      <div className="featuredservice px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20">
+      {/* <div className="featuredservice px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20">
         <FeaturedService/>
-      </div>
+      </div> */}
       
-      <div ref={scopeContainer}
-      className="clipVision  px-[75px] py-[88px] overflow-hidden bg-white w-screen h-[600px] z-10">
+      {/* <div ref={scopeContainer}
+      className="clipVision  px-[75px] py-[88px] overflow-hidden bg-white w-screen h-[600px] z-10 ">
         <div 
-        className='backgroundOverlaypic absolute -top-0 left-0 w-full h-full -z-10'></div>
+        className='backgroundOverlaypic absolute -top-0 left-0 w-full h-full -z-10 '></div>
         <Vision className='vision_mover'/>
-      </div>
+      </div> */}
 
-      <div className="advantages_container px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20">
+
+      {/* ///////////////// */}
+
+      <div className="advantages_container px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20 xsm:max-sm:px-[20px]">
         <Advantages/>
       </div>
 
-      <div className="px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20">
+      <div className="px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20 xsm:max-sm:px-[20px]">
         <Testimonials/>
       </div>
 
-      <div className="px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20">
+      <div className="px-[75px] py-[88px] bg-white w-screen -mt-[50px] z-20 xsm:max-sm:px-[20px]">
         <Partners/>
       </div>
       
-      <div className="footer_container text-white px-[75px] py-[88px] w-screen -mt-[50px] z-20">
+      <div className="footer_container text-white px-[75px] py-[88px] w-screen -mt-[50px] z-20 xsm:max-sm:px-[20px]">
         <Footer/>
       </div>
     </main>
