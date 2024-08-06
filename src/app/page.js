@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <main className="mainContainer relative overflow-hidden flex h-full flex-col items-center  bg-black z-20">
       
-      <div className="w-full fixed top-0 z-50 ">
+      <div className="w-screen fixed top-0 z-50 ">
         <MainHeader/>
       </div>
 
