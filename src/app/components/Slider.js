@@ -107,7 +107,7 @@ export default function Slider({slides}) {
                     <>
                     {loading[index]? 
                     <img
-                    onLoad={()=>{reLoad(index+1);}}
+                    onLoad={()=>{reLoad(slide+1);}}
                     width={200}
                     height={200}
                     alt={`Slide${index}`}
@@ -121,7 +121,7 @@ export default function Slider({slides}) {
                     // onTransitionStart={handleImageLoad(index)}
                     onLoad={()=>{reLoad(index+1);handleImageLoad(index)}}
                     width={144} height={144} className={`bg-cover bg-center transition-all duration-200 ease-in-out ${loading[index]? 'animate-pulse': 'animate-none'} rounded-xl xsm:max-[400px]:max-w-[300px] xsm:max-sm:min-h-[300px]  sm:max-mainheader_breakpoint_four:max-w-[400px] mainheader_breakpoint_four:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[400px] h-[400px]`}
-                    src={loading[index]? `/api/streams/${index}`: slides[index].heroPic } alt={`slide${index}`} />
+                    src={loading[index]? `/api/streams/${slide}`: slides[index].heroPic } alt={`slide${index}`} />
                     
                     }
                     </>
