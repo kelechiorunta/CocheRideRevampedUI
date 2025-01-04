@@ -3,12 +3,12 @@ import path from 'path';
 import { Readable } from 'stream';
 import sharp from 'sharp';
 import { NextResponse } from 'next/server';
-import slides from 'src/app/slides';
+
 
 export const handler = async (req, res) => {
     if (req.method === 'GET') {
         try {
-            const imagePath = path.resolve(`./public/${slides[0].heroPic}`);
+            const imagePath = path.resolve(`./public/assets/img/MoveGoods/move-goods-overlay.png`);
             const imageBuffer = await fs.readFile(imagePath);
 
             // Resize the image
@@ -47,4 +47,3 @@ export const handler = async (req, res) => {
 };
 
 export { handler as GET };
-
