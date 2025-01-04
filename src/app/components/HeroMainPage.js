@@ -7,14 +7,14 @@ import border1 from '../../../public/assets/img/border1.png'
 import border2 from '../../../public/assets/img/border2.png'
 import { FaLocationPinLock, FaMapPin } from 'react-icons/fa6'
 
-import pic1 from '../../../public/assets/img/slide-pix@2x.jpg'
-import pic2 from '../../../public/assets/img/slide-pix2@2x.jpg'
-import pic3 from '../../../public/assets/img/slide-pix3@2x.jpg'
+// import pic1 from '../../../public/assets/img/slide-pix@2x.jpg'
+// import pic2 from '../../../public/assets/img/slide-pix2@2x.jpg'
+// import pic3 from '../../../public/assets/img/slide-pix3@2x.jpg'
 
 const slides = [
-    { id: 0, heroPic: pic1},
-    { id: 1, heroPic: pic2},
-    { id: 2, heroPic: pic3},
+    { id: 0, heroPic: '/slide-pix@2x.jpg'},
+    { id: 1, heroPic: '/slide-pix2@2x.jpg'},
+    { id: 2, heroPic: '/slide-pix3@2x'},
   ]
 
 const options = ["Trucks", "Buses", "Minivans", "Other Vehicles"]
@@ -45,7 +45,7 @@ export default function HeroMainPage() {
             </div>
             <div>
                 <button className='headerbutton px-[20px] py-[12px] rounded-3xl' type='submit'>
-                    Get Quick Quote
+                    Get Quick Quotes
                 </button>
             </div>
         </form>

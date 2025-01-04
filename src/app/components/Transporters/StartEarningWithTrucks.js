@@ -1,9 +1,11 @@
-import React from 'react'
+'use client'
+import React, {useState} from 'react'
 import TransporterPic from '../../../../public/assets/img/about4@2x.jpg'
 import MoveGoodsOverlay from '../../../../public/assets/img/MoveGoods/move-goods-overlay.png'
 import Image from 'next/image'
 
 export default function StartEarningWithTrucks() {
+  const [loading, setLoading] = useState(false)
   return (
     <div className='flex items-center gap-[200px] justify-between py-[100px] w-full'>
         <div className='flex flex-col items-start gap-8 mt-16 w-[80%]'>
@@ -18,9 +20,19 @@ export default function StartEarningWithTrucks() {
             </div>
         </div>
         <div className='w-[50%] relative'>
-            <Image className='w-[450px] h-[450px] rounded-xl' src={TransporterPic} alt='movegoods'/>
-            <Image className='absolute top-[15%] -left-[23%] w-[23%] h-[40%]'
-             src={MoveGoodsOverlay} alt='movegoods_overlay'/>
+            <Image
+            onLoad={()=>{setLoading(true)}}
+            className='overflow-hidden w-[450px] h-[450px] rounded-xl'
+            width={200}
+            height={200}
+            src={!loading? '/api/transporters' : TransporterPic}
+            alt='movegoods'/>
+            <Image
+            onLoad={()=>{setLoading(true)}}
+            width={200}
+            height={200}
+            className='overflow-hidden absolute top-[15%] -left-[23%] w-[23%] h-[40%]'
+            src={!loading? '/api/movegood' : MoveGoodsOverlay} alt='movegoods_overlay'/>
         </div>
     </div>
   )

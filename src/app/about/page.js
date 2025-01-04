@@ -7,10 +7,11 @@ import OurFleet from '../components/AboutUs/OurFleet'
 import Achievements from '../components/AboutUs/Achievements'
 import AboutPartners from '../components/AboutUs/AboutPartners'
 import AboutFooter from '../components/AboutUs/AboutFooter'
+import Footer from '../components/Footer'
 
 export default function AboutUsPage() {
   return (
-    <main className="bg-[#fffbf3] main_section relative flex h-full w-full flex-col items-center  px-[75px] z-50">
+    <main className="bg-[#fffbf3] overflow-hidden main_section relative flex h-full w-full flex-col items-center  px-[75px] z-50">
         <div className='main_heroSection fixed top-0 z-30 w-screen shadow-sm h-auto'>
            <AboutHeader/> 
         </div>
@@ -37,7 +38,8 @@ export default function AboutUsPage() {
         </div>
 
         <div className='flex items-center z-20 w-screen h-full px-[75px] py-[75px] bg-black text-white'>
-           <AboutFooter/>
+           {/* <AboutFooter/> */}
+           <Footer/>
         </div>
     </main>
   )

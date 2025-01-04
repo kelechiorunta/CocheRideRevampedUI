@@ -19,11 +19,11 @@ import FeaturedServiceII from "./builder_components/featuredserviceII/FeaturedSe
 // import Testimonials from "./builder_components/Testimonials/Testimonials";
 // import Advantages from "./builder_components/Advantages/Advantages";
 // import AdvantagesII from "./builder_components/AdvantagesII/AdvantagesII";
-
+import slides from '../app/slides'
 
 import { gsap, ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
@@ -32,6 +32,7 @@ export default function Home() {
   const scopeContainer = useRef(null)
   const menuContainer = useRef(null)
   //const headerRef = useRef(null)
+  const [loading, setLoading] = useState(true)
 
   
 
@@ -65,6 +66,12 @@ export default function Home() {
     });
   }, {scope: scopeContainer.current});
 
+  // const slides = [
+  //   { id: 0, heroPic: '/slide-pix@2x.jpg'},
+  //   { id: 1, heroPic: '/slide-pix2@2x.jpg'},
+  //   { id: 2, heroPic: '/slide-pix3@2x.jpg'},
+  // ]
+
   return (
     <main className="mainContainer relative overflow-hidden flex h-full flex-col items-center  bg-black z-20">
       
@@ -73,7 +80,11 @@ export default function Home() {
       </div>
 
       <div className=" w-screen pt-16">
-        <LandingSection/>
+        {/* <Image 
+        onLoad={()=>setLoading(false)}
+        className="container max-w-full"
+        src={loading? '/api/streams' : slides[0].heroPic} width={500} height={500} alt="sample" /> */}
+        <LandingSection slides={slides}/>
       </div>
       <div className=" w-screen -mt-28 ">
         <WhoWeAre/>
