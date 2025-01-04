@@ -30,7 +30,9 @@ export default function Testimonials() {
             top-[18px] max-sm:h-[388px] max-sm:left-[-41px] max-sm:max-w-[582px] max-sm:w-[337px]"/>
         </div>
         {/* <Slider slides/> */}
-        <div className='w-full max-w-[679px] mt-[20px] mx-auto text-white xsm:max-[400px]:max-w-[337px] xsm:max-[400px]:ml-10 xsm:max-[400px]:max-h-[520px]'><TestimonialSlider testimonials={testimonials}/></div>
+        <div className='w-full max-w-[679px] mt-[20px] mx-auto text-white xsm:max-[400px]:max-w-[337px] xsm:max-[400px]:ml-10 xsm:max-[400px]:max-h-[520px]'>
+          <TestimonialSlider testimonials={testimonials}/>
+        </div>
     </div>
   )
 }

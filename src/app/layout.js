@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { Nunito } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Template from "./template";
 // import MainHeader from "./components/MainHeader";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} w-screen`}>
+        <Template>
         {children}
+        </Template>
       </body>
     </html>
   );

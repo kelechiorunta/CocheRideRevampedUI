@@ -48,7 +48,7 @@ export default function OdometerStats() {
 
   return (
     <div ref={odometerRef}
-        className='z-10 w-full flex gap-x-8 gap-y-4 items-center justify-center'>
+        className='z-10 w-full flex gap-x-8 gap-y-4 items-center justify-center flex-wrap xsm:max-md:flex-col'>
         <div className='p-8 border shadow-xl text-4xl rounded flex flex-col gap-6 items-center justify-center w-[300px] h-[300px]'>
             <FaTruck size={50}/>
             <div className='flex gap-2'><Odometer value={dayTrucks} /> +</div>

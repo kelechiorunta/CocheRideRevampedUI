@@ -2,10 +2,12 @@ import React from 'react'
 
 export default function OurFleet() {
   return (
-    <div className='flex flex-col gap-y-8 items-center justify-center w-full h-full px-[50px]'>
-        <h1 className='OurFleet_heading text-4xl'>Africa's Digital Logistics & Haulage Company</h1>
-        <div className='flex gap-2 items-center p-8 w-full'>
-            <div className='flex flex-col items-start gap-y-4 w-full'>
+    <div className='flex flex-col gap-y-8 items-center justify-center w-full h-full
+    px-[50px] xsm:max-sm:px-4 xsm:max-sm:-mt-20'>
+        <h1 className='OurFleet_heading text-4xl xsm:max-[400px]:text-3xl'>Africa's Digital Logistics & Haulage Company</h1>
+        <div className='flex gap-2 items-center p-8 w-full xsm:max-[1188px]:flex-col xsm:max-2xl:w-5/5 xsm:max-[1188px]:flex-col
+         xsm:max-sm:px-2'>
+            <div className='flex flex-col items-start gap-y-4 w-full xsm:max-md:-mt-10'>
                 <h1 className='OurFleet_title text-3xl'>Our Fleet</h1>
                 <p className='OurFleet_subtitle_1 text-xl'>With a network of registered and verified truck owners
                      and riders all over Nigeria, we got you covered

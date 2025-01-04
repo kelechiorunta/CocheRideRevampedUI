@@ -21,17 +21,18 @@ import Image from 'next/image'
 
 export default function Partners() {
   return (
-    <div className='flex items-start gap-8 w-full'>
+    <div className='flex items-start gap-8 w-full xsm:max-[1189px]:flex-col xsm:max-sm:-ml-10
+     xsm:max-[400px]:-ml-16'>
         <div className='flex flex-col items-start justify-end gap-8 w-[548px]'>
             <small className='partners_title px-4'>PARTNERS & CLIENTS</small>
-            <h1 className='partners_heading text-4xl leading-snug'>Trusted by over 20+ Partners & Clients</h1>
-            <p className='leading-snug text-xl w-3/4'>
+            <h1 className='partners_heading text-4xl leading-snug xsm:max-sm:max-w-[373px] xsm:max-[400px]:text-3xl'>Trusted by over 20+ Partners & Clients</h1>
+            <p className='leading-snug text-xl w-3/4 xsm:max-sm:max-w-[340px] xsm:max-[400px]:max-w-[340px]'>
                 From multinational corporations to local enterprises, 
                 our partners and clients form the backbone of our success.
             </p>
 
         </div>
-        <div className='flex flex-row flex-wrap items-start justify-center gap-14 w-[868px]'>
+        <div className='flex flex-row flex-wrap items-start justify-start gap-14 max-w-[868px] xsm:max-[400px]:justify-center '>
                 <Image className='w-[150px] h-{150px]' src={partner1} alt='pic'/>
                 <Image className='w-[150px] h-{150px]' src={partner2} alt='pic'/>
                 <Image className='w-[150px] h-{150px]' src={partner3} alt='pic'/>
