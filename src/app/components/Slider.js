@@ -37,8 +37,8 @@ export default function Slider({slides}) {
       };
     }
     // setLoading(false)
-    handleImageLoad(slide)
-    reLoad(slide+1)
+    // handleImageLoad(slide)
+    // reLoad(slide+1)
   }, [slide, direction, loading]);
 
   const handleImageLoad = (index) => {
@@ -86,16 +86,16 @@ export default function Slider({slides}) {
         
         <div className={`bg-[url('/api/streams/${0}')] bg-cover bg-center transition-opacity duration-200 ease-in-out ${loading[0]? 'animate-none': 'animate-none'} rounded-xl xsm:max-[400px]:max-w-[300px] xsm:max-sm:min-h-[300px] w-[400px] h-[400px]`}
         style={{ overflow: 'hidden', position: 'relative'}}>
-            <AnimatePresence  initial={false} custom={direction}>
+            <AnimatePresence  initial={loading[slide]} custom={direction}>
             {slides.length>0 && slides.map((slidepic, index) => (
                 (index === slide || index === prevSlide) && (
                 <motion.div
-                onViewportEnter={()=>{reLoad(slide+1); reLoad(slide)}}
+                // onViewportEnter={()=>{reLoad(slide+1);}}
                 className={`bg-[url('/api/streams/${index}')] transition-opacity duration-200 ease-in-out ${loading[index]? 'animate-pulse': 'animate-none'} bg-cover bg-center rounded-xl xsm:max-[400px]:max-w-[300px] xsm:max-sm:min-h-[300px] md:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[400px] h-[400px]`}
                     // onAnimationComplete={()=>reLoad(index)}
-                    onAnimationStart={()=>{reLoad(slide+1); reLoad(slide)}}
+                    // onAnimationStart={()=>{reLoad(slide+1);}}
                     key={index}
-                    onAnimationComplete={()=>{reLoad(slide+1); handleImageLoad(slide);}}
+                    // onAnimationComplete={()=>{reLoad(slide+1); handleImageLoad(slide);}}
                     // onLayoutAnimationStart={()=>reLoad(index)}
                     initial={{ x: index === slide ? (direction === 1 ? '100%' : '-100%') : (direction === 1 ? '-100%' : '100%')}}
                     animate={{ x: index === slide ? 0 : (direction === 1 ? '-100%' : '100%') }}
@@ -107,7 +107,7 @@ export default function Slider({slides}) {
                     <>
                     {loading[index]? 
                     <img
-                    onLoad={()=>{reLoad(slide+1);}}
+                    onLoad={()=>{handleImageLoad(index)}}
                     width={200}
                     height={200}
                     alt={`Slide${index}`}
@@ -119,9 +119,9 @@ export default function Slider({slides}) {
                     <img
                     loading='lazy'
                     // onTransitionStart={handleImageLoad(index)}
-                    onLoad={()=>{reLoad(index+1);handleImageLoad(index)}}
+                    onLoad={()=>{handleImageLoad(index)}}
                     width={144} height={144} className={`bg-cover bg-center transition-all duration-200 ease-in-out ${loading[index]? 'animate-pulse': 'animate-none'} rounded-xl xsm:max-[400px]:max-w-[300px] xsm:max-sm:min-h-[300px]  sm:max-mainheader_breakpoint_four:max-w-[400px] mainheader_breakpoint_four:max-xl:h-[400px] w-[400px] xl:max-2xl:w-[400px] h-[400px]`}
-                    src={loading[index]? `/api/streams/${slide}`: slides[index].heroPic } alt={`slide${index}`} />
+                    src={loading[index]? `/api/streams/${index}`: slides[index].heroPic } alt={`slide${index}`} />
                     
                     }
                     </>
